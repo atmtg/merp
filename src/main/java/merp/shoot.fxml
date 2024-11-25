@@ -1,0 +1,37 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import merp.controls.IntegerTextField?>
+<GridPane fx:controller="merp.ShootController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <Label text="Choose Opponent:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <ComboBox fx:id="opponents" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#opponentSelected"/>
+
+    <Label text="Choose Attack:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <ComboBox fx:id="attacks" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Unlimited D100:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <IntegerTextField fx:id="roll" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label text="Range:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <IntegerTextField fx:id="rangeField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label fx:id="rangeHelp" text="" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+    <Label text="Opponent Parries (MAX half AB and Carrying Shield):" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <IntegerTextField fx:id="oppParryField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+    <Label text="Attacker has Lost More than Half of Their HP:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+    <CheckBox fx:id="hurtBox" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+    <Label text="Attacker Switched Weapon or Readied Shield:" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+    <CheckBox fx:id="drawBox" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+    <Label text="Other mod (e.g. -10 for Each 3m the Attacker has Moved):" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+    <IntegerTextField fx:id="extraField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+    <Button
+        fx:id="shootButton" GridPane.columnIndex="1" GridPane.rowIndex="10" text="Shoot!" onAction="#doShoot" />
+
+    <Label text=""
+           GridPane.columnIndex="0" GridPane.rowIndex="11"/>
+</GridPane>

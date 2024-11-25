@@ -1,0 +1,10 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane fx:controller="merp.HealController" xmlns:fx="http://javafx.com/fxml" >
+    <center><TableView fx:id="damageTable" prefWidth="-Infinity" prefHeight="800" >
+        <columns>
+            <TableColumn text="Damage" fx:id="columnDamage" prefWidth="200" />
+        </columns>
+    </TableView></center>
+    <bottom><Button text="Close" onAction="#close" BorderPane.alignment="CENTER"/></bottom>
+</BorderPane>

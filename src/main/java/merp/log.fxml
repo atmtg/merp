@@ -1,0 +1,6 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:controller="merp.LogController" xmlns:fx="http://javafx.com/fxml" >
+
+        <ListView fx:id="logTable" prefWidth="800" prefHeight="1000"/>
+</VBox>

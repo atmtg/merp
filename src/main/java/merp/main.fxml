@@ -1,0 +1,24 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane fx:controller="merp.Controller" xmlns:fx="http://javafx.com/fxml" >
+    <top>
+    <MenuBar fx:id="menuBar">
+        <menus>
+            <Menu text="Tools">
+                <items>
+                    <MenuItem text="Add Character" onAction="#newCharacter"/>
+                    <MenuItem text="Combat Log..." onAction="#warLog"/>
+                    <SeparatorMenuItem  />
+                    <MenuItem text="Exit" onAction="#handleExitAction"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    </top>
+    <center><TableView fx:id="characterTable" prefWidth="-Infinity" prefHeight="800" >
+        <columns>
+            <TableColumn text="Name" fx:id="columnName" prefWidth="200" />
+        </columns>
+    </TableView></center>
+    <bottom><Button text="New Round" onAction="#newRound" prefWidth="500" BorderPane.alignment="CENTER"/></bottom>
+</BorderPane>

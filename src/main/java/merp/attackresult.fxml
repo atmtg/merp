@@ -1,0 +1,57 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import merp.controls.IntegerTextField?>
+<GridPane fx:controller="merp.AttackResultController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Label text="The Attach Gave the Followin Result:"
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <Label fx:id="hitPointsDamage"
+            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Primary Critical Injury:"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    <Label fx:id="primaryCrit"
+            GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Secondary Critical Injury:"
+           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+    <Label fx:id="secondaryCrit"
+              GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label text=""
+           GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+    <Label text="Additional HP:"
+           GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+
+    <IntegerTextField fx:id="critSPField"
+           GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+    <Label text="HP per Round:"
+           GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+
+    <IntegerTextField fx:id="bleedField"
+                      GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+    <Label text="Stunned (rounds):"
+           GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+
+    <IntegerTextField fx:id="stunnedField"
+                      GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+    <Label text="Negative Bonus to Activity:"
+           GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+
+    <IntegerTextField fx:id="immobilizedField"
+                      GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+    <Button
+        GridPane.columnIndex="1" GridPane.rowIndex="9" text="OK" onAction="#close" />
+
+    <Label text=""
+           GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+
+</GridPane>

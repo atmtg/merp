@@ -1,0 +1,48 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import merp.controls.IntegerTextField?>
+<GridPane fx:controller="merp.AttackController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <Label text="Choose Opponent:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <ComboBox fx:id="opponents" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#opponentSelected" />
+
+    <Label text="Choose Attack:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <ComboBox fx:id="attacks" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Unlimited D100:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <IntegerTextField fx:id="roll" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label text="Parry (MAX half AB):" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <IntegerTextField fx:id="parryField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <Label text="Opponent parries (MAX half AB):" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <IntegerTextField fx:id="oppParryField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <Label text="Opponent Uses their Shield:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <CheckBox fx:id="shieldBox" GridPane.columnIndex="1" GridPane.rowIndex="6" onAction="#checkShield" disable="true"/>
+
+    <Label text="Attack from the Side:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+    <CheckBox fx:id="sideBox" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+    <Label text="Attack from Behind:" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+    <CheckBox fx:id="backBox" GridPane.columnIndex="1" GridPane.rowIndex="8" onAction="#checkBack"/>
+
+    <Label text="Defender Surprised:" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+    <CheckBox fx:id="surpriseBox" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+    <Label text="Defender Stunned:" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+    <CheckBox fx:id="stunBox" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+    <Label text="Attacker has Lost more than Half of their HP:" GridPane.columnIndex="0" GridPane.rowIndex="11"/>
+    <CheckBox fx:id="hurtBox" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+
+    <Label text="Attacker Switched Weapon or Readied Shield:" GridPane.columnIndex="0" GridPane.rowIndex="12"/>
+    <CheckBox fx:id="drawBox" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+
+    <Label text="Other mod (e.g. -10 for every 3m the Attacker has Moved):" GridPane.columnIndex="0" GridPane.rowIndex="13"/>
+    <IntegerTextField fx:id="extraField" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+
+    <Button
+        fx:id="attackButton" GridPane.columnIndex="1" GridPane.rowIndex="14" text="Attack!" onAction="#doAttack" disable="true"/>
+</GridPane>
